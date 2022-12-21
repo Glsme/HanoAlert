@@ -26,17 +26,8 @@ HanoAlert(title: "Title", message: "Message", confirm: "OK", cancel: "Cancel", f
 <br/></br>
 ## Installation
 
-### CocoaPods
-
-YMLogoAlert is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'HanoAlert'
-```
-
 ### Swift Package Manager
-```ruby
+```swift
 https://github.com/Glsme/HanoAlert.git
 ```
 <br/></br>

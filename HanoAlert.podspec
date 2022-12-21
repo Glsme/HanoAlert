@@ -8,8 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HanoAlert'
-  s.version          = '0.1.0'
-  s.summary          = '간단한 Alert을 View에 출력해주는 Library입니다.'
+  s.version          = '1.0.0'
+  s.summary          = 'A simple Alert to the view.'
+  s.swift_version = '5.0'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

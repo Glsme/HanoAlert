@@ -27,7 +27,7 @@ HanoAlert(title: "Title", message: "Message", confirm: "OK", cancel: "Cancel", f
 ## Installation
 
 ### Swift Package Manager
-```swift
+```ruby
 https://github.com/Glsme/HanoAlert.git
 ```
 <br/></br>

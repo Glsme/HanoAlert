@@ -1,0 +1,16 @@
+PODS:
+  - HanoAlert (0.1.0)
+
+DEPENDENCIES:
+  - HanoAlert (from `../`)
+
+EXTERNAL SOURCES:
+  HanoAlert:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HanoAlert: cb6d7d3264267ace6df50396cd0d36847adba1ed
+
+PODFILE CHECKSUM: 7c6a7615177bd4f5babcea40135b8bb2edc1a373
+
+COCOAPODS: 1.11.3

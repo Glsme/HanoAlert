@@ -1,0 +1,6 @@
+framework module HanoAlert {
+  umbrella header "HanoAlert-umbrella.h"
+
+  export *
+  module * { export * }
+}

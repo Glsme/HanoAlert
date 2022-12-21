@@ -1,5 +1,5 @@
 # HanoAlert
- [![SwiftPM](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)](https://swift.org/package-manager/) [![License](https://img.shields.io/cocoapods/l/HanoAlert.svg?style=flat)](https://cocoapods.org/pods/HanoAlert) [![Platform](https://img.shields.io/cocoapods/p/HanoAlert.svg?style=flat)](https://cocoapods.org/pods/HanoAlert)
+![iOS badge](https://img.shields.io/badge/SPM-supported-red) ![iOS badge](https://img.shields.io/badge/license-MIT-lightgrey) ![iOS badge](https://img.shields.io/badge/platform-iOS-lightgrey)
 
 <br/></br>
 ![HanoAlert](https://user-images.githubusercontent.com/88874280/208947135-2d2336fd-d9a1-46fd-91a7-972090745945.gif)

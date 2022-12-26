@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HanoAlert'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'A simple Alert to the view.'
   s.swift_version = '5.0'
 

@@ -10,11 +10,11 @@
 ## Example
 ```swift
 //One Button Alert
-HanoAlert(title: "Title", message: "Message", confirm: "OK", font: nil, buttonStyle: .oneButton, completionHandler: nil)
+HanoAlert(title: "Title", message: "Message", confirm: "OK", buttonStyle: .oneButton, completionHandler: nil)
             .showAlert(view)
     
 //Two Button Alert
-HanoAlert(title: "Title", message: "Message", confirm: "OK", cancel: "Cancel", font: nil, buttonStyle: .twoButton, completionHandler: nil)
+HanoAlert(title: "Title", message: "Message", confirm: "OK", cancel: "Cancel", buttonStyle: .twoButton, completionHandler: nil)
             .showAlert(view)
 ```
 

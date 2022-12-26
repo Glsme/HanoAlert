@@ -20,12 +20,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func HanoAlertOneButtonTapped(_ sender: UIButton) {
-        HanoAlert(title: "타이틀", message: "메시지", confirm: "확인", font: nil, buttonStyle: .oneButton, completionHandler: nil)
+        HanoAlert(title: "타이틀", message: "메시지", confirm: "확인", buttonStyle: .oneButton, completionHandler: nil)
             .showAlert(view)
     }
     
     @IBAction func HanoAlertTwoButtonTapped(_ sender: UIButton) {
-        HanoAlert(title: "타이틀", message: "메시지", confirm: "확인", cancel: "취소", font: nil, buttonStyle: .twoButton, completionHandler: nil)
+        HanoAlert(title: "타이틀", message: "안녕하세요\nHano입니다.\n잘부탁드립니다람쥐", confirm: "확인", cancel: "취소", confirmColor: .red, buttonStyle: .twoButton, completionHandler: nil)
             .showAlert(view)
     }
 }

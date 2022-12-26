@@ -42,7 +42,7 @@
 		607FACE51AFB9204008FA782 /* HanoAlert_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HanoAlert_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		79C8D7D114C8B95E8D0B5749 /* HanoAlert.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HanoAlert.podspec; path = ../HanoAlert.podspec; sourceTree = "<group>"; };
+		79C8D7D114C8B95E8D0B5749 /* HanoAlert.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HanoAlert.podspec; path = ../HanoAlert.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		85C134BCF85F3E850004C08F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C76C1CA66591DC85340E6E44 /* Pods-HanoAlert_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HanoAlert_Tests.release.xcconfig"; path = "Target Support Files/Pods-HanoAlert_Tests/Pods-HanoAlert_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CC762B4F64580F404F3DE83B /* Pods_HanoAlert_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HanoAlert_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };

@@ -78,13 +78,14 @@ open class HanoAlert: UIView {
                             message: String,
                             confirm: String,
                             cancel: String,
-                            font: UIFont? = nil,
+                            confirmColor: UIColor? = nil,
                             buttonStyle: HanoAlertButtonStyle,
                             completionHandler: (() -> Void)?) {
         self.init(frame: CGRect.zero)
         self.title = title
         self.message = message
         self.confirm = confirm
+        self.confirmColor = confirmColor ?? #colorLiteral(red: 0.6705638112, green: 0.8669828945, blue: 1, alpha: 1)
         self.cancel = cancel
         self.buttonStyle = buttonStyle
         self.completionHandler = completionHandler
@@ -94,13 +95,14 @@ open class HanoAlert: UIView {
     public convenience init(title: String? = nil,
                             message: String,
                             confirm: String,
-                            font: UIFont? = nil,
+                            confirmColor: UIColor? = nil,
                             buttonStyle: HanoAlertButtonStyle,
                             completionHandler: (() -> Void)?) {
         self.init(frame: CGRect.zero)
         self.title = title
         self.message = message
         self.confirm = confirm
+        self.confirmColor = confirmColor ?? #colorLiteral(red: 0.6705638112, green: 0.8669828945, blue: 1, alpha: 1)
         self.buttonStyle = buttonStyle
         self.completionHandler = completionHandler
     }
@@ -133,7 +135,8 @@ open class HanoAlert: UIView {
         alertView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         alertView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         alertView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.7).isActive = true
-        alertView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.15).isActive = true
+//        alertView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.15).isActive = true
+        alertView.heightAnchor.constraint(greaterThanOrEqualTo: self.heightAnchor, multiplier: 0.15).isActive = true
         
         titleLabel.topAnchor.constraint(equalTo: alertView.topAnchor, constant: 10).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: alertView.leadingAnchor).isActive = true
@@ -142,23 +145,26 @@ open class HanoAlert: UIView {
         decriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15).isActive = true
         decriptionLabel.leadingAnchor.constraint(equalTo: alertView.leadingAnchor, constant: 10).isActive = true
         decriptionLabel.trailingAnchor.constraint(equalTo: alertView.trailingAnchor, constant: -10).isActive = true
-        decriptionLabel.heightAnchor.constraint(lessThanOrEqualToConstant: 30).isActive = true
+        decriptionLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 30).isActive = true
         
         switch buttonStyle {
         case .twoButton:
             alertView.addSubview(cancelButton)
             alertView.addSubview(confirmButton)
             cancelButton.leadingAnchor.constraint(equalTo: alertView.leadingAnchor).isActive = true
+            cancelButton.topAnchor.constraint(equalTo: decriptionLabel.bottomAnchor, constant: 10).isActive = true
             cancelButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
             cancelButton.widthAnchor.constraint(equalTo: alertView.widthAnchor, multiplier: 0.5).isActive = true
             cancelButton.bottomAnchor.constraint(equalTo: alertView.bottomAnchor).isActive = true
             
             confirmButton.trailingAnchor.constraint(equalTo: alertView.trailingAnchor).isActive = true
+            confirmButton.topAnchor.constraint(equalTo: cancelButton.topAnchor).isActive = true
             confirmButton.heightAnchor.constraint(equalTo: cancelButton.heightAnchor).isActive = true
             confirmButton.leadingAnchor.constraint(equalTo: cancelButton.trailingAnchor).isActive = true
             confirmButton.bottomAnchor.constraint(equalTo: alertView.bottomAnchor).isActive = true
         case .oneButton:
             alertView.addSubview(confirmButton)
+            confirmButton.topAnchor.constraint(equalTo: decriptionLabel.bottomAnchor, constant: 10).isActive = true
             confirmButton.trailingAnchor.constraint(equalTo: alertView.trailingAnchor).isActive = true
             confirmButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
             confirmButton.leadingAnchor.constraint(equalTo: alertView.leadingAnchor).isActive = true
@@ -174,6 +180,7 @@ open class HanoAlert: UIView {
         cancelButton.setTitle(cancel ?? "", for: .normal)
         
         setFont()
+        setColor()
         confirmButton.addTarget(self, action: #selector(confirmButtonTapped), for: .touchUpInside)
         cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
     }
@@ -184,6 +191,10 @@ open class HanoAlert: UIView {
         decriptionLabel.font = font
         confirmButton.titleLabel?.font = font
         cancelButton.titleLabel?.font = font
+    }
+    
+    private func setColor() {
+        confirmButton.backgroundColor = confirmColor
     }
     
     @objc private func confirmButtonTapped() {

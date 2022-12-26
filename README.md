@@ -20,7 +20,7 @@ HanoAlert(title: "Title", message: "Message", confirm: "OK", cancel: "Cancel", b
 
 <br/></br>
 ## Requirements
-- iOS 13.0
+- iOS 11.0
 - Swift 5
 
 <br/></br>

@@ -25,7 +25,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func HanoAlertTwoButtonTapped(_ sender: UIButton) {
-        HanoAlert(title: "타이틀", message: "안녕하세요\nHano입니다.\n잘부탁드립니다람쥐", confirm: "확인", cancel: "취소", confirmColor: .red, buttonStyle: .twoButton, completionHandler: nil)
+        HanoAlert(title: "타이틀", message: "안녕하세요\nHano입니다.\n잘부탁드립니다람쥐", confirm: "확인", cancel: "취소", confirmColor: .red, buttonStyle: .twoButton, completionHandler: { [weak self] in
+            guard let self = self else { return }
+            self.view.backgroundColor = .lightGray
+        })
             .showAlert(view)
     }
 }
